@@ -2,14 +2,57 @@ import java.util.Arrays;
 
 public class Main {
 
-/*    public static float countSalary (float salary){
+    public static void countSalary(Employee[] arr) {
+        float sum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            float salary = arr[i].getSalary();
+            sum = sum + salary;
+        }
+        System.out.println("Сумма средст на зарплату: " + sum);
+    }
+
+    public static void findMaxSalary (Employee[] arr){
+
+        float maxSalary = 0;
+        for (int i = 0; i < arr.length; i++){
+            if (maxSalary < arr [i].getSalary()) {
+                maxSalary = arr[i].getSalary();
+            }
+        } System.out.println("Максимальная зарплата: " + maxSalary);
+    }
+
+    public static void findMinSalary (Employee[] arr){
+
+        float minSalary = arr[0].getSalary();
+        for (int i = 0; i < arr.length; i++){
+            if (minSalary > arr[i].getSalary()){
+                minSalary = arr[i].getSalary();
+            }
+        }
+        System.out.println("Минимальная зарплата: " + minSalary);
+    }
+
+    public static void findAverageSalary (Employee[] arr){
 
         float sum = 0;
-        for (int i = 0; i < )
-        sum = sum + salary;
+        for (int i = 0; i < arr.length; i++) {
+            float salary = arr[i].getSalary();
+            sum = sum + salary;
+        }
+        float averageSalary = sum/ arr.length;
+        System.out.println("Средняя зарплата: "+ averageSalary);
+    }
 
-        return sum;
-    }*/
+    public static void makeListEmployees (Employee[] arr){
+
+        String listEmployees = new String();
+        for (int i = 0; i < arr.length; i++){
+            listEmployees = arr[i].getEmployeeName();
+            System.out.println("Сотрудник: " + listEmployees);
+        }
+    }
+
+
     public static void main(String[] args) {
 
         Employee [] employees = new Employee[10];
@@ -27,6 +70,11 @@ public class Main {
 
         System.out.println("Количество сотрудников: " + Employee.getCounter());
         System.out.println(Arrays.toString(employees));
+        Main.countSalary(employees);
+        Main.findMaxSalary(employees);
+        Main.findMinSalary(employees);
+        Main.findAverageSalary(employees);
+        Main.makeListEmployees(employees);
 
     }
 }

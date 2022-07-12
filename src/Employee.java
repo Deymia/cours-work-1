@@ -42,7 +42,6 @@ public class Employee {
         return id;
     }
 
-
     @Override
     public String toString() {
         return id+ " ФИО сотрудника: " + this.employeeName + "\n Номер отдела: " + this.department + "\n Заработная плата: " + this.salary + "\n";
@@ -51,15 +50,11 @@ public class Employee {
     public static int getCounter() {
         return counter;
     }
-
-
-/*    public static float countSalary(float salary) {
-
+/*
+    public static float countSalary(float salary){
         float sum = 0;
-        sum = sum + salary;
-
+        sum = sum+ salary;
         return sum;
-
     }*/
 
 
