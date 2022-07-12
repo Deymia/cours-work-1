@@ -50,12 +50,6 @@ public class Employee {
     public static int getCounter() {
         return counter;
     }
-/*
-    public static float countSalary(float salary){
-        float sum = 0;
-        sum = sum+ salary;
-        return sum;
-    }*/
 
 
 
